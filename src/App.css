@@ -32,7 +32,160 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: url('background.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.title {
+  margin-left: 3vh;
+  text-align: left;
+  color: rgb(62, 115, 117);
+}
+
+.center {
+  position: relative;
+  align-items: center;
+  display: inline-block;
+}
+
+.input {
+  width: 60vh;
+  height: 4vh;
+  border: none;
+  border-radius: 2vh;
+}
+
+.center input[type="text"] {
+  color: #818080;
+  margin-bottom: 10px;
+}
+
+.center input::placeholder {
+  padding-left: 4vh;
+}
+
+.center button {
+  background-color: transparent;
+  border: none;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  top: 14%;
+  right: 2%;
+  color: #818080;
+}
+
+.center input[type="text"]:active,
+.center input[type="text"]:focus {
+  border: 1px solid #5c5ff2 !important;
+  outline: none;
+  /* Remove the default outline */
+}
+
+.left {
+  text-align: left;
+  border-radius: 2vh;
+  width: 25vh;
+  margin-top: 10vh;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  margin-left: 30vh;
+  margin-bottom: 2vh;
+}
+
+.right {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  float: right;
+  width: 50%;
+  margin-right: 2vh;
+  border-radius: 2vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.right p {
+  margin: 0;
+}
+
+.right div {
+  margin: 2vh;
+}
+
+.temp {
+  width: 30%;
+  margin-left: 13vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 2vh;
+
+}
+
+.temp img {
+  width: 30vh;
+  height: 25vh;
+}
+
+.sub-temp {
+  display: flex;
+  flex-direction: row;
+}
+.sub-temp img{
+  position: relative;
+}
+.sub-temp p{
+  position: relative;
+  margin-top: 14%;
+  font-size: 5vh;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left{
+    left: 0%;
+    margin: 0vh;
+    order: 1;
+  }
+
+  .temp{
+    top: 10%;
+    width: 80%;
+    margin: 2vh;
+    order: 2;
+
+  }
+
+  .right{
+    order: 3;
+    margin: 2vh;
+    width: 80%;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+align-items: center;
   }
 }
