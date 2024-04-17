@@ -74,7 +74,7 @@ function App() {
       <h1 className='title'>Weather App</h1>
       <form onSubmit={handleSubmit}>
         <div className="center">
-          <input className='input' type='text' name='city' placeholder={weatherData ? city : 'Loading...'} value={city}
+          <input className='input' type='text' name='city' placeholder={weatherData ? city : 'Enter the city...'} value={city}
             onChange={handleInputChange} 
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
