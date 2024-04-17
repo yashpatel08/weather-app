@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (!city) return; // Skip API call if city is empty
+        if (!city) return;  
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
         const response = await axios.get(url);
         setWeatherData(response.data);
